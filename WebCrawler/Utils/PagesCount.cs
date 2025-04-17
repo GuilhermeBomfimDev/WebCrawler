@@ -50,11 +50,6 @@ namespace WebCrawler.Utils
                     }
                 }
             }
-
-            // 1. Baixa HTML da página inicial
-            // 2. Descobre o total de páginas
-            // 3. Monta as URLs de todas as páginas e retorna
-
             return urls;
         }
     }

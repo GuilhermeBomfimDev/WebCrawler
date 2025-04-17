@@ -21,7 +21,9 @@ namespace WebCrawler.Controllers
 
             Console.WriteLine("Obtendo os dados de cada linha da tabela");
             var getDataHtml = new ExtractorService();
-            var dataProxies = await getDataHtml.ExtractProxy("C:/Projetos/WebCrawler/WebCrawler/PrintHtml/");
+            var threadLimiter = new ThreadLimiter();
+            var filePaths = Directory.GetFiles("C:/Projetos/WebCrawler/WebCrawler/PrintHtml/", "*.html").ToList();
+            var dataProxies = await threadLimiter.ExecuteWithLimit(filePaths, getDataHtml);
 
             foreach (var proxy in dataProxies)
             {
