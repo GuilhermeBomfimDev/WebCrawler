@@ -1,6 +1,6 @@
 ﻿namespace WebCrawler.Models
 {
-    class DadosProxy
+    public class DadosProxy
     {
         public string IpAdress { get; set; }
         public string Port { get; set; }

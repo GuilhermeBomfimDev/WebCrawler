@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using WebCrawler.Services;
+using WebCrawler.Utils;
 
 namespace WebCrawler.Controllers
 {
@@ -10,15 +7,17 @@ namespace WebCrawler.Controllers
     {
         public async Task StartProject()
         {
-            DateTime startService = DateTime.Now;
-            Console.WriteLine(startService);
+            // 1. Registrar horário de início
+            DateTime startService = DateTime.UtcNow;
 
-            DateTime endService = DateTime.Now;
+            var pagesCount = new PagesCount();
+            var urls = await pagesCount.GetAllPages();
+
+            var saveHtml = new HtmlSaverService();
+            await saveHtml.SaveAllHtml(urls);
+
+            DateTime endService = DateTime.UtcNow;
             Console.WriteLine(endService);
-
-            Console.WriteLine("WebCrawler iniciado.");
-
-            Console.WriteLine("WebCrawler finalizado.");
         }
     }
 }

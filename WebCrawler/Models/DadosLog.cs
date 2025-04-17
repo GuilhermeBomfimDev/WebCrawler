@@ -1,6 +1,6 @@
 ﻿namespace WebCrawler.Models
 {
-    class DadosLog
+    public class DadosLog
     {
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
