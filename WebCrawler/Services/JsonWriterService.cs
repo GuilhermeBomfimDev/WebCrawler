@@ -1,22 +1,22 @@
 ﻿using System.Text.Json;
 using WebCrawler.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WebCrawler.Services
 {
     public class JsonWriterService
     {
-        public async Task<string> SaveToJsonAsync (List<DadosProxy> proxies)
+        public async Task<string> SaveToJsonAsync (List<DadosProxy> dadosProxy, string fileName)
         {
-            string directory = "C:/Projetos/WebCrawler/WebCrawler/Resultado";
+            string directory = "C:/Projetos/WebCrawler/WebCrawler/Jsons";
 
             if (!Directory.Exists (directory))
             {
                 Directory.CreateDirectory (directory);
             }
+            string filePath = Path.Combine(directory, fileName);
 
-            string filePath = Path.Combine(directory, $"proxies_{DateTime.Now:yyyyMMdd_HHmmss}.json");
-
-            var json = JsonSerializer.Serialize (proxies);
+            var json = JsonSerializer.Serialize(dadosProxy, new JsonSerializerOptions { WriteIndented = true });
             await File.WriteAllTextAsync (filePath, json);
 
             return filePath;

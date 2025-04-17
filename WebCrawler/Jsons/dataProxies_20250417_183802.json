@@ -1,0 +1,122 @@
+[
+  {
+    "IpAddress": "98.188.47.132",
+    "Port": "56550504",
+    "Country": "United States",
+    "Protocol": "SOCKS4/5"
+  },
+  {
+    "IpAddress": "192.252.216.86",
+    "Port": "56550504",
+    "Country": "United States",
+    "Protocol": "SOCKS4/5"
+  },
+  {
+    "IpAddress": "192.111.138.29",
+    "Port": "56550504",
+    "Country": "United States",
+    "Protocol": "SOCKS4/5"
+  },
+  {
+    "IpAddress": "180.178.37.114",
+    "Port": "5A54",
+    "Country": "Hong Kong SAR China",
+    "Protocol": "HTTPS"
+  },
+  {
+    "IpAddress": "184.181.217.201",
+    "Port": "56550504",
+    "Country": "United States",
+    "Protocol": "SOCKS4/5"
+  },
+  {
+    "IpAddress": "198.8.94.174",
+    "Port": "515D010601",
+    "Country": "United States",
+    "Protocol": "SOCKS4/5"
+  },
+  {
+    "IpAddress": "165.232.167.165",
+    "Port": "5A5C0909",
+    "Country": "Singapore",
+    "Protocol": "HTTPS"
+  },
+  {
+    "IpAddress": "185.191.236.162",
+    "Port": "51550309",
+    "Country": "Switzerland",
+    "Protocol": "HTTPS"
+  },
+  {
+    "IpAddress": "64.23.207.76",
+    "Port": "5A5C0909",
+    "Country": "United States",
+    "Protocol": "HTTPS"
+  },
+  {
+    "IpAddress": "168.121.242.66",
+    "Port": "5B5D08",
+    "Country": "Mexico",
+    "Protocol": "HTTPS"
+  },
+  {
+    "IpAddress": "146.190.126.79",
+    "Port": "5A5C0909",
+    "Country": "United States",
+    "Protocol": "HTTPS"
+  },
+  {
+    "IpAddress": "64.23.248.232",
+    "Port": "5A5C0909",
+    "Country": "United States",
+    "Protocol": "HTTPS"
+  },
+  {
+    "IpAddress": "146.190.72.171",
+    "Port": "5A5C0909",
+    "Country": "United States",
+    "Protocol": "HTTPS"
+  },
+  {
+    "IpAddress": "146.190.118.219",
+    "Port": "5A5C0909",
+    "Country": "United States",
+    "Protocol": "HTTPS"
+  },
+  {
+    "IpAddress": "185.141.227.216",
+    "Port": "51550309",
+    "Country": "Russia",
+    "Protocol": "HTTPS"
+  },
+  {
+    "IpAddress": "72.49.49.11",
+    "Port": "515501020D",
+    "Country": "United States",
+    "Protocol": "SOCKS4/5"
+  },
+  {
+    "IpAddress": "104.200.152.30",
+    "Port": "56550504",
+    "Country": "United States",
+    "Protocol": "SOCKS4/5"
+  },
+  {
+    "IpAddress": "142.54.237.38",
+    "Port": "56550504",
+    "Country": "United States",
+    "Protocol": "SOCKS4/5"
+  },
+  {
+    "IpAddress": "107.152.98.5",
+    "Port": "56550504",
+    "Country": "United States",
+    "Protocol": "SOCKS4/5"
+  },
+  {
+    "IpAddress": "107.181.161.81",
+    "Port": "56550504",
+    "Country": "United States",
+    "Protocol": "SOCKS4/5"
+  }
+]

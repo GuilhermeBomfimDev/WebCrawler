@@ -20,12 +20,11 @@ namespace WebCrawler.Utils
                 HtmlDocument doc = new HtmlDocument();
                 doc.LoadHtml(html);
 
-                var pageLinks = doc.DocumentNode
-                    .SelectNodes("//ul[contains(@class, 'pagination')]//a");
+                var pageLinks = doc.DocumentNode.SelectNodes("//a[contains(@href, '/page/') or contains(@class, 'next')]");
 
-                if (pageLinks != null)
+                if (pageLinks != null && pageLinks.Count > 0)
                 {
-                    int indexPage = 2;
+                    int maxPageNumber = 0;
                     foreach (var link in pageLinks)
                     {
                         string href = link.GetAttributeValue("href", string.Empty);
@@ -33,23 +32,30 @@ namespace WebCrawler.Utils
                         if (!string.IsNullOrEmpty(href) && href.Contains("/page/"))
                         {
                             string page = href.Split("/page/").Last();
-                            int pageNumber = int.Parse(page);
-
-                            if (pageNumber > indexPage)
+                            Console.WriteLine(page);
+                            if (int.TryParse(page, out int pageNumber))
                             {
-                                int lastPage = pageNumber;
-
-                                for (int i = 2; i <= lastPage; i++)
+                                if (pageNumber > maxPageNumber)
                                 {
-                                    string urlFull = MainUrl + $"/page/{i}";
-                                    urls.Add(urlFull);
+                                    maxPageNumber = pageNumber;
                                 }
                             }
-                            indexPage++;
                         }
+                    }
+
+                    Console.WriteLine("Maior pagina: " + maxPageNumber);
+
+                    for (int i = 2; i <= maxPageNumber; i++)
+                    {
+                        string urlFull = MainUrl + $"/page/{i}";
+                        urls.Add(urlFull);
+                        Console.WriteLine("Pagina: " + i + " " + urlFull);
                     }
                 }
             }
+
+            Console.WriteLine("Total de páginas encontradas: " + urls.Count);
+
             return urls;
         }
     }
