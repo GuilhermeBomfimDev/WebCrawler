@@ -32,7 +32,6 @@ namespace WebCrawler.Utils
                         if (!string.IsNullOrEmpty(href) && href.Contains("/page/"))
                         {
                             string page = href.Split("/page/").Last();
-                            Console.WriteLine(page);
                             if (int.TryParse(page, out int pageNumber))
                             {
                                 if (pageNumber > maxPageNumber)
@@ -43,18 +42,13 @@ namespace WebCrawler.Utils
                         }
                     }
 
-                    Console.WriteLine("Maior pagina: " + maxPageNumber);
-
                     for (int i = 2; i <= maxPageNumber; i++)
                     {
                         string urlFull = MainUrl + $"/page/{i}";
                         urls.Add(urlFull);
-                        Console.WriteLine("Pagina: " + i + " " + urlFull);
                     }
                 }
             }
-
-            Console.WriteLine("Total de páginas encontradas: " + urls.Count);
 
             return urls;
         }

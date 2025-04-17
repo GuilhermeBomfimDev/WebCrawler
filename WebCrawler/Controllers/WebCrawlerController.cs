@@ -54,7 +54,7 @@ namespace WebCrawler.Controllers
             await context.DadosLog.AddAsync(log);
             await context.SaveChangesAsync();
 
-            Console.WriteLine("Log salvo no banco com sucesso!");
+            Console.WriteLine("Log salvo no banco com sucesso!\n");
         }
     }
 }
