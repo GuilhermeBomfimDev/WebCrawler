@@ -1,4 +1,5 @@
-﻿using WebCrawler.Services;
+﻿using System.Xml.Linq;
+using WebCrawler.Services;
 using WebCrawler.Utils;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -29,6 +30,10 @@ namespace WebCrawler.Controllers
             {
                 Console.WriteLine($"Ip:{proxy.IpAddress} - Port:{proxy.Port} - Country:{proxy.Country} - Protocol:{proxy.Protocol}");
             }
+
+            Console.WriteLine("Salvando o arquivo Json");
+            var saveJson = new JsonWriterService();
+            await saveJson.SaveToJsonAsync(dataProxies);
 
             DateTime endService = DateTime.UtcNow;
             Console.WriteLine("Hora final: " + endService);
